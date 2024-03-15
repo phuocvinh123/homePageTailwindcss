@@ -67,13 +67,13 @@ document.querySelector(".button-sell")?.addEventListener("click", () => handleCh
 
 // 4000
 document.addEventListener("DOMContentLoaded", function () {
-  let countElement = document.querySelector(".count-animate");
+  const countElement = document.querySelector(".count-animate");
 
-  let targetNumber = 4000;
+  const targetNumber = 4000;
   let currentNumber = 0;
-  let increment = Math.ceil(targetNumber / 100);
+  const increment = Math.ceil(targetNumber / 100);
   if (countElement) {
-    let interval = setInterval(function () {
+    const interval = setInterval(function () {
       countElement.textContent = currentNumber.toLocaleString() + "+";
 
       if (currentNumber >= targetNumber) {
@@ -87,16 +87,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //count
 document.addEventListener('DOMContentLoaded', function () {
-  var countedElements = []; 
-  var allTargetsReached = false;
+  const countedElements: string[] = [];
+  let allTargetsReached = false;
 
-  function countUp(elementSelector, targetNumber, suffix = '', delay) {
-    var countElement = document.querySelector(elementSelector);
-    var currentNumber = 0;
-    var increment = Math.ceil(targetNumber / targetNumber);
+  function countUp(elementSelector: string, targetNumber: number, suffix = '', delay: number | undefined) {
+    const countElement = document.querySelector(elementSelector) as HTMLElement | null;
+    let currentNumber = 0; // Change from const to let
+    const increment = Math.ceil(targetNumber / targetNumber);
 
-    var interval = setInterval(function () {
-      countElement.textContent = currentNumber.toLocaleString() + suffix;
+    const interval = setInterval(function () {
+      if (countElement) {
+        countElement.textContent = currentNumber.toLocaleString() + suffix;
+      }
 
       if (currentNumber >= targetNumber) {
         clearInterval(interval);
@@ -108,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function checkScrollAndCount() {
-    var elementsToCount = [
+    const elementsToCount: { selector: string; target: number; suffix: string; delay: number }[] = [
       { selector: '.count-patients', target: 200, suffix: '', delay: 20 },
       { selector: '.count-hearts', target: 20, suffix: '', delay: 200 },
       { selector: '.count-doctors', target: 10, suffix: 'K', delay: 400 },
@@ -116,11 +118,11 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     elementsToCount.forEach(function (element) {
-      var countElement = document.querySelector(element.selector);
+      const countElement = document.querySelector(element.selector) as HTMLElement | null;
       if (countElement && !countedElements.includes(element.selector)) {
-        var elementPosition = countElement.getBoundingClientRect().top;
-        var screenHeight = window.innerHeight;
-        var triggerPosition = screenHeight * 0.75;
+        const elementPosition = countElement.getBoundingClientRect().top;s
+        const screenHeight = window.innerHeight;
+        const triggerPosition = screenHeight * 0.75;
 
         if (elementPosition < triggerPosition) {
           countUp(element.selector, element.target, element.suffix, element.delay);
@@ -131,9 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function checkAllTargetsReached() {
-    if (!allTargetsReached && countedElements.length === 4) { // Cần phải có 4 elements
+    if (!allTargetsReached && countedElements.length === 4) {
       allTargetsReached = true;
-      // Thực hiện các tác vụ sau khi tất cả các target đã được đạt đến
       console.log("Tất cả các target đã được đạt đến cùng một lúc.");
     }
   }
@@ -143,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function () {
     checkScrollAndCount();
   });
 });
+
+ 
 
 
 
