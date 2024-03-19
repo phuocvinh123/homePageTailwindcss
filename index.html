@@ -24,262 +24,285 @@
   <!--  line-awesome 2 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vidaloka&display=swap" rel="stylesheet">
+
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 </head>
 
-<body class="font-[Jost,sans-serif]">
+<body class="font-[Jost,sans-serif] items-center">
+
+  <!-- Progress point -->
+  <div class="fixed bottom-10 right-10 z-30 progress-point hidden transition duration-300">
+    <div class="relative flex justify-center  text-orange-500">
+      <div class=" bg-slate-100 p-5 rounded-full border-orange-300 border-2 progress-check stroke-orange-500 fill-none">
+
+      </div>
+      <div class="absolute top-3">
+        <ion-icon name="arrow-up" class="size-5"></ion-icon>
+      </div>
+    </div>
+  </div>
+  <!-- End progress point -->
+
+
   <!-- Header -->
   <header class="text-sm md:text-base lg:text-lg font-normal bg-gray-200">
-    <div class="mx-2 sm:mx-6 lg:mx-8 xl:mx-16 sm:p-3 flex justify-center sm:justify-between">
+    <div
+      class="w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto sm:p-3 flex justify-center sm:justify-between">
       <div class="flex justify-center gap-10 sm:gap-3">
         <div class="flex flex-wrap items-center gap-3">
           <span class="w-4 h-6">
             <ion-icon name="call" class="text-base"></ion-icon>
           </span>
-          <p>(629) 555-0129</p>
+          <p class="font-[Jost,sans-serif]">(629) 555-0129</p>
         </div>
         <div class="flex flex-wrap items-center gap-3">
           <span class="w-4 h-6">
             <ion-icon name="mail" class="size-4"></ion-icon>
           </span>
-          <p>infor@example.com</p>
+          <p class="font-[Jost,sans-serif]">infor@example.com</p>
         </div>
       </div>
       <div class="sm:flex flex-wrap items-center gap-3 hidden">
         <span class="w-4 h-6">
           <ion-icon name="location" class="size-4"></ion-icon>
         </span>
-        <p>6391 Elgin St. Celina, 10299</p>
+        <p class="font-[Jost,sans-serif]">6391 Elgin St. Celina, 10299</p>
       </div>
     </div>
   </header>
   <!-- End Header -->
 
   <!-- Nav Bar -->
-  <nav class="nav-menu bg-slate-50 shadow-md w-full h-16 lg:h-28 z-20 opacity-95">
-    <div class="flex flex-wrap justify-between text-base items-center mx-2 sm:mx-6 lg:mx-8 xl:mx-16 px-3">
-      <a href="javascript:void(0)" class="py-3 lg:py-10">
-        <img src="/images/logo.png" alt="" />
-      </a>
-      <!-- <ul class="hidden lg:flex flex-wrap gap-6 items-center">
-        <li class="relative group py-3 lg:py-10">
-          <a href="javascript:void(0)"
-            class="text-orange-400 cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
-            Home
-            <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
-          </a>
-          <ul
-            class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 boder rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Home One</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Home Two</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Home Three</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Home Four</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Home Five</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Home Video</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Home Map</p>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="relative group py-3 lg:py-10">
-          <a href="javascript:void(0)"
-            class="cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
-            Pages
-            <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
-          </a>
-          <ul
-            class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 boder rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Property</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Property Sidebar</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Property Details</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Add new Listing</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Map Location</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>About us</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>FAQ</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Cheack out</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Cart</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Login</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Account</p>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="relative group py-3 lg:py-10">
-          <a href="javascript:void(0)"
-            class="cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
-            Project
-            <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
-          </a>
-          <ul
-            class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 boder rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Project</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Project Details</p>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="relative group py-3 lg:py-10">
-          <a href="javascript:void(0)"
-            class="cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
-            Blog
-            <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
-          </a>
-          <ul
-            class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 boder rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Blog Classic</p>
-              </div>
-            </li>
-            <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-              <div class="flex flex-wrap items-center gap-1">
-                <ion-icon name="play-forward" class="hidden"> </ion-icon>
-                <p>Blog Details</p>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="relative group py-10">
-          <a href="javascript:void(0)" class="cursor-default items-center gap-2 hover:text-orange-400"> Contact </a>
-        </li>
-      </ul> -->
-      <div id="menu-container">
-        <script id="menu-template" type="text/x-handlebars-template">
-          <ul class="hidden lg:flex flex-wrap gap-6 items-center">
-            {{#each menuItems}}
-              <li class="relative group py-3 lg:py-10">
-                <a href="#" class="cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
-                  {{menuName}}
-                  <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
-                </a>
-                <ul class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 border rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
-                  {{#each submenuItems}}
-                    <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
-                      <div class="flex flex-wrap items-center gap-1">
-                        <ion-icon name="play-forward" class="hidden"></ion-icon>
-                        <p>{{this}}</p>
-                      </div>
-                    </li>
-                  {{/each}}
-                </ul>
-              </li>
-            {{/each}}
-            <li class="relative group py-10">
-              <a href="#" class="cursor-default items-center gap-2 hover:text-orange-400"> Contact </a>
-            </li>
-          </ul>
-        </script>
-      </div>
-
-
-      <div class="hidden lg:flex flex-wrap gap-6 items-center">
-        <ion-icon name="stats-chart"
-          class="-rotate-90 text-3xl cursor-pointer hover:text-orange-300 transition ease-in-out mr-3">
-        </ion-icon>
-        <a href="javascript:void(0)" class="hover:bg-gray-200 border items-center px-8 py-5">
-          SELL PROPERTY
-          <div class="items-center text-orange-300 inline-block">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
+  <nav class="nav-menu sticky flex justify-items-center items-center z-20 bg-slate-50 opacity-95">
+    <div class="w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] h-16 lg:h-28 mx-auto px-3">
+      <div class="flex flex-wrap justify-between text-base items-center ">
+        <a href="javascript:void(0)" class="py-3 lg:py-10">
+          <img src="/images/logo.png" alt="" />
         </a>
-      </div>
-      <div class="lg:hidden flex items-center hover:cursor-pointer">
-        <ion-icon name="menu" class="text-4xl z-30" id="menuNav"></ion-icon>
+        <!-- <ul class="hidden lg:flex flex-wrap gap-6 items-center">
+          <li class="relative group py-3 lg:py-10">
+            <a href="javascript:void(0)"
+              class="text-orange-400 cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
+              Home
+              <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
+            </a>
+            <ul
+              class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 boder rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Home One</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Home Two</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Home Three</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Home Four</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Home Five</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Home Video</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Home Map</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="relative group py-3 lg:py-10">
+            <a href="javascript:void(0)"
+              class="cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
+              Pages
+              <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
+            </a>
+            <ul
+              class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 boder rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Property</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Property Sidebar</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Property Details</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Add new Listing</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Map Location</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>About us</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>FAQ</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Cheack out</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Cart</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Login</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Account</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="relative group py-3 lg:py-10">
+            <a href="javascript:void(0)"
+              class="cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
+              Project
+              <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
+            </a>
+            <ul
+              class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 boder rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Project</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Project Details</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="relative group py-3 lg:py-10">
+            <a href="javascript:void(0)"
+              class="cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
+              Blog
+              <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
+            </a>
+            <ul
+              class="absolute mt-9 bg-white right-2 opacity-0 transition left-0 boder rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Blog Classic</p>
+                </div>
+              </li>
+              <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                <div class="flex flex-wrap items-center gap-1">
+                  <ion-icon name="play-forward" class="hidden"> </ion-icon>
+                  <p>Blog Details</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="relative group py-10">
+            <a href="javascript:void(0)" class="cursor-default items-center gap-2 hover:text-orange-400"> Contact </a>
+          </li>
+        </ul> -->
+        <div id="menu-container">
+          <script id="menu-template" type="text/x-handlebars-template">
+            <ul class="hidden lg:flex flex-wrap gap-6 items-center font-[Jost,sans-serif]">
+              {{#each menuItems}}
+                <li class="relative group py-3 lg:py-10 z-20">
+                  <a href="#" class="cursor-default items-center flex justify-center gap-2 hover:text-orange-400">
+                    {{menuName}}
+                    <ion-icon name="chevron-down-outline" class="group-hover:rotate-180"></ion-icon>
+                  </a>
+                  <ul 
+                  class="hidden group-hover:block absolute mt-9 bg-white right-2 opacity-0 transition left-0 border rounded-md p-2 min-w-48 group-hover:translate-y-1 translate-y-0 group-hover:opacity-100 duration-500">
+                    {{#each submenuItems}}
+                      <li class="hover:bg-slate-300 p-2 rounded-md main-icon">
+                        <div class="flex flex-wrap items-center gap-1">
+                          <ion-icon name="play-forward" class="hidden"></ion-icon>
+                          <p>{{this}}</p>
+                        </div>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+              <li class="relative group py-10">
+                <a href="#" class="cursor-default items-center gap-2 hover:text-orange-400"> Contact </a>
+              </li>
+            </ul>
+          </script>
+        </div>
+
+        <div class="hidden lg:flex flex-wrap gap-6 items-center">
+          <ion-icon name="stats-chart"
+            class="-rotate-90 text-3xl cursor-pointer hover:text-orange-300 transition ease-in-out mr-3">
+          </ion-icon>
+          <a href="javascript:void(0)" class="hover:bg-gray-200 border items-center px-8 py-5 font-[Jost,sans-serif]">
+            SELL PROPERTY
+            <div class="items-center text-orange-300 inline-block">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </a>
+        </div>
+        <div class="lg:hidden flex items-center hover:cursor-pointer">
+          <ion-icon name="menu" class="text-4xl z-30" id="menuNav"></ion-icon>
+        </div>
       </div>
     </div>
   </nav>
@@ -421,22 +444,21 @@
   <div
     class="bg-gray-900 opacity-50 z-20 h-full w-screen fixed top-0 hidden duration-700 ease-in transform button-close-video">
   </div>
-
   <!-- End Nav Bar -->
 
   <!-- Main -->
-  <main class="bg-gray-100">
-    <div class="mx-2 sm:mx-6 lg:mx-8 xl:mx-16 px-3 py-20 relative max-h-full">
+  <main class="bg-gray-100 z-0">
+    <div class="w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto px-3 py-20 relative">
       <div class="lg:grid lg:grid-cols-2 relative">
         <div class="">
-          <h3 class="text-sm font-bold">FINTECH FUSION</h3>
-          <h1 class="text-3xl md:text-7xl font-bold pt-3 tracking-wide">
+          <h3 class="text-sm font-bold font-[Jost,sans-serif]">FINTECH FUSION</h3>
+          <h1 class="text-3xl md:text-6xl font-bold pt-3 tracking-wide font-[Poppins,sans-serif]">
             Invest today in You
           </h1>
           <h1 class="text-3xl md:text-6xl font-bold font-[Poppins,sans-serif] text-orange-500 tracking-wide">
             Dream Home
           </h1>
-          <h6 class="text-slate-500 pt-3 xl:pr-52 leading-5 font-normal tracking-wide">
+          <h6 class="text-slate-500 pt-3 xl:pr-52 text-lg leading-5 font-normal tracking-wide font-[Jost,sans-serif]">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum voluptatem quidem numquam sequi, ipsam
             necessitatibus omnis fugiat reiciendis.
         </div>
@@ -444,24 +466,24 @@
           <img src="/images/banner-img.png" alt="" class="w-full h-auto img-1">
           <img src="/images/shape-triangle.png" alt="" class="absolute animate-rotation top-10 size-5 sm:size-20">
           <img src="/images/shape-circle.png" alt=""
-            class="absolute left-48 md:right-96 animate-rotationScale top-44 size-5 sm:size-20">
-          <img src="/images/shape-moon.png" alt="" class="absolute right-0 animate-turnOver top-48 size-5 sm:size-20">
+            class="absolute right-64 md:right-96 animate-rotationScale top-32 size-5 sm:size-20">
+          <img src="/images/shape-moon.png" alt="" class="absolute right-10 animate-turnOver top-32 size-5 sm:size-20">
         </div>
         <div class="z-10 pt-20 absolute top-36 sm:top-48 lg:top-64 w-full">
           <form>
             <div class="flex justify-start gap-4">
-              <button class="button-activated px-7 py-2 rounded-md border-2 button-rent hover:text-orange-300"
+              <button class="button-activated px-7 py-2 rounded-md border-2 button-rent hover:text-orange-300 font-[Jost,sans-serif]"
                 type="reset">Rent</button>
-              <button class="button-not-activated px-7 py-2 border-2 rounded-md button-buy hover:text-orange-300"
+              <button class="button-not-activated px-7 py-2 border-2 rounded-md button-buy hover:text-orange-300 font-[Jost,sans-serif]"
                 type="reset">Buy</button>
-              <button class="button-not-activated px-7 py-2 border-2 rounded-md button-sell hover:text-orange-300"
+              <button class="button-not-activated px-7 py-2 border-2 rounded-md button-sell hover:text-orange-300 font-[Jost,sans-serif]"
                 type="reset">Sell</button>
             </div>
             <div class="w-full mt-3 p-7 grid lg:grid-cols-4 grid-cols-2 gap-4 bg-white">
               <input type="text" placeholder="Enter Keyword"
-                class="p-5 border-2 border-slate-200 rounded-md text-black focus:ring-2 focus:ring-orange-600 focus:border-none outline-none">
+                class="p-5 border-2 border-slate-200 rounded-md text-black focus:ring-2 focus:ring-orange-600 focus:border-none outline-none font-[Jost,sans-serif]">
               <select
-                class="p-5 border-2 border-slate-200 rounded-md focus:ring-2 focus:ring-orange-600 focus:border-none outline-none"
+                class="p-5 border-2 border-slate-200 rounded-md focus:ring-2 focus:ring-orange-600 focus:border-none outline-none font-[Jost,sans-serif]"
                 value="absolute">
                 <option value="" disabled>Prototype</option>
                 <option value="apartment">Apartment</option>
@@ -470,7 +492,7 @@
                 <option value="single">Single Family</option>
               </select>
               <select
-                class="p-5 border-2 border-slate-200 rounded-md focus:ring-2 focus:ring-orange-600 focus:border-none outline-none"
+                class="p-5 border-2 border-slate-200 rounded-md focus:ring-2 focus:ring-orange-600 focus:border-none outline-none font-[Jost,sans-serif]"
                 value="bangladesh">
                 <option value="" disabled>Location</option>
                 <option value="bangladesh">Bangladesh</option>
@@ -481,7 +503,7 @@
                 <option value="thailand">Thailand</option>
               </select>
               <button
-                class="w-full border rounded text-center text-lg leading-non py-3 pl-3 text-white bg-gradient-to-t from-orange-600 to-orange-400 uppercase">Find
+                class="w-full border rounded text-center text-lg leading-non py-3 pl-3 text-white bg-gradient-to-t from-orange-600 to-orange-400 uppercase font-[Jost,sans-serif] ">Find
                 now</button>
             </div>
           </form>
@@ -493,38 +515,39 @@
   <!-- About section start -->
   <section class="bg-gray-100">
     <div class="pb-12 pt-10 lg:pb-28">
-      <div class="mx-2 px-3 sm:mx-6 sm:p-3 lg:mx-8 grid lg:grid-cols-2 grid-cols-1 gap-10 xl:gap-16 xl:mx-10">
+      <div
+        class="w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-10 xl:gap-16  ">
         <div
           class="relative flex justify-between mt-10 lg:mb-0 md:mb-32 w-full h-full md:h-[85%] lg:h-[70%] mr-20 lg:mr-0">
           <div
-            class="absolute top-0 left-0 w-[40%] lg:w-1/3 h-full rounded-lg bg-gradient-to-l from-orange-100 via-orange-200/65 to-orange-500/30">
+            class="absolute top-0 left-0 w-1/4 lg:w-1/3 h-full rounded-lg bg-gradient-to-l from-orange-100 via-orange-200/65 to-orange-500/30">
           </div>
           <div
-            class="absolute top-0 right-0 w-[40%] lg:w-1/3 h-full rounded-lg bg-gradient-to-r from-orange-100 via-orange-200/65 to-orange-500/30">
+            class="absolute top-0 right-0 w-1/4 lg:w-1/3 h-full rounded-lg bg-gradient-to-r from-orange-100 via-orange-200/65 to-orange-500/30">
           </div>
           <div class="relative p-10 xl:p-20 w-full h-full mx-0 lg:mx-auto">
             <img src="/images/about-img.png" class="w-full md:w-2/3 lg:w-full h-full justify-center px-auto mx-auto" />
             <div
-              class="absolute left-[33%] sm:left-[34%] md:left-[40%] lg:left-[34%] bottom-0 bg-white border rounded-lg flex justify-center gap-1 xl:gap-4 p-1 sm:p-5 xl:p-6">
+              class="absolute left-[33%] sm:left-[34%] md:left-[40%] lg:left-[30%] bottom-0 bg-white border rounded-lg flex justify-center gap-1 xl:gap-4 p-1 sm:p-5 xl:p-6">
               <span class="">
                 <i class="fas fa-users text-gradient text-orange-500 text-xl xl:text-4xl my-1 xl:my-2"></i>
               </span>
               <div class="my-1 xl:my-2">
-                <h5 class="font-medium text-lg xl:text-3xl count-animate" style="visibility: visible"></h5>
-                <span class="fs-18 text-gray-400 text-sm xl:text-xl">Satisfied Clients</span>
+                <h5 class="font-medium text-lg xl:text-3xl count-animate font-[Poppins,sans-serif]" style="visibility: visible"></h5>
+                <span class="fs-18 text-gray-400 text-sm xl:text-xl font-[Jost,sans-serif]">Satisfied Clients</span>
               </div>
             </div>
           </div>
         </div>
         <div class="*:pb-8 pt-8 mg:pt-0">
           <div>
-            <span class="rounded-md border-none bg-white px-2 py-1 font-semibold uppercase text-orange-500">about
+            <span class="rounded-md border-none bg-white px-2 py-1 font-semibold uppercase text-orange-400 font-[Jost,sans-serif]">about
               us</span>
-            <h2 class="my-3 font-serif text-2xl font-semibold lg:text-3xl xl:text-5xl tracking-wider">Stay with us feel
+            <h2 class="my-3 text-2xl lg:text-3xl xl:text-5xl tracking-wider font-[Vidaloka,serif]">Stay with us feel
               at home Your
               perfect stay
               awaits</h2>
-            <p class="text-lg tracking-wide text-gray-500">Real Estate is a vast industry that deals with the buying,
+            <p class="text-lg tracking-wide text-gray-500 font-[Jost,sans-serif]">Real Estate is a vast industry that deals with the buying,
               selling, and renting of properties. It inv transactions related to residential</p>
           </div>
           <div class="mt-6 flex rounded-md border border-gray-400 px-4 py-4 shadow-sm">
@@ -532,15 +555,15 @@
               <img src="/images/about-icon.svg" class="w-25" />
             </div>
             <div class="">
-              <h6 class="text-xl font-medium">Your Dream Home Awaits</h6>
-              <p class="mt-3 text-xs text-gray-400">Real Estate is a vast industry that deals with the buying, selling,
+              <h6 class="text-xl font-medium font-[Poppins,sans-serif]">Your Dream Home Awaits</h6>
+              <p class="mt-3 text-xs text-gray-400 font-[Jost,sans-serif]">Real Estate is a vast industry that deals with the buying, selling,
                 and renting of properties. It inv transactions related to residential, commercial, and industrial
                 properties</p>
             </div>
           </div>
           <div class="mt-8 flex">
             <div class="rounded-md border bg-gradient-to-t from-orange-600 to-orange-400 px-8 py-4">
-              <a href="#" class="btn btn-main uppercase text-white">Learn More
+              <a href="#" class="btn btn-main uppercase text-white font-[Jost,sans-serif] ">Learn More
                 <span class="icon-right">
                   <i class="fas fa-arrow-right ml-2 text-white"></i>
                 </span>
@@ -553,20 +576,19 @@
   </section>
   <!-- END About section start -->
 
-
   <!--  Property Start  -->
   <section class="bg-black">
-    <div class="py-14 md:py-16 lg:py-28 mx-2 sm:mx-6 lg:mx-8 xl:mx-16 sm:p-3">
+    <div class="py-14 md:py-16 lg:py-28 w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto sm:p-3">
       <div class="lg:grid lg:grid-cols-3 gap-4 justify-between">
         <div class="relative lg:col-span-2">
-          <span class="uppercase font-serif text-orange-400 bg-[#232225] shadow px-2 py-1"> LATEST PROPERTY </span>
-          <h2 class="text-white font-serif text-2xl lg:text-4xl xl:text-5xl mt-4 font-semibold">
+          <span class="uppercase  text-orange-400 bg-[#232225] shadow px-2 py-1 font-[Jost,sans-serif]"> LATEST PROPERTY </span>
+          <h2 class="text-white text-2xl lg:text-4xl xl:text-5xl mt-4 font-[Vidaloka,serif]">
             Prestige Propert Management property for you
           </h2>
         </div>
         <div class="mt-item flex lg:justify-end lg:items-end justify-start items-start">
           <a href="#"
-            class="text-white font-semibold uppercase rounded cursor-pointer bg-gradient-to-t from-orange-300 to-orange-600 py-3 lg:py-4 px-8">
+            class="text-white font-semibold uppercase rounded cursor-pointer bg-gradient-to-t from-orange-300 to-orange-600 py-3 lg:py-4 px-8 font-[Jost,sans-serif]">
             View More
             <span class="icon-right">
               <i class="fas fa-arrow-right ml-2"></i>
@@ -581,19 +603,19 @@
               <img src="/images/property-1.png" alt=""
                 class="group-hover:scale-105 w-full max-w-full h-full duration-500" />
             </a>
-            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2">Sale</span>
+            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2 font-[Jost,sans-serif]">Sale</span>
           </div>
           <div class="text-white bg-[#232225] px-2 md:px-4 xl:px-8">
-            <h6 class="pt-4 text-lg md:text-2xl">
+            <h6 class="pt-4 text-lg md:text-2xl font-[Poppins,sans-serif]">
               $500.00
-              <span class="text-sm text-gray-400">/per day</span>
+              <span class="text-sm text-gray-400 font-[Poppins,sans-serif]">/per day</span>
             </h6>
             <h6 class="mt-4">
-              <a href="#" class="text-base md:text-xl font-serif hover:text-orange-500 line-clamp-2 xl:line-clamp-none">
+              <a href="#" class="text-base md:text-xl  hover:text-orange-500 line-clamp-2 xl:line-clamp-none font-[Poppins,sans-serif]">
                 Paramount Investments Prestige Property Management
               </a>
             </h6>
-            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base">
+            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base font-[Jost,sans-serif]">
               <span class="icon"> <i class="fas fa-map-marker-alt"></i></span>
               66 Broklyant, New York America
             </p>
@@ -601,13 +623,13 @@
               <div class="grid grid-cols-2 md:grid-cols-3 mt-2 text-gray-200 text-sm gap-1">
                 <div class="">
                   <span class="icon"><i class="fas fa-bed"></i></span>
-                  <span class="text">3 Beds</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Beds</span>
                 </div>
                 <div class="">
                   <span class="icon"><i class="fas fa-bath"></i></span>
-                  <span class="text">3 Baths</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Baths</span>
                 </div>
-                <a href="#" class="simple-btn text-gray-400 hover:text-orange-400 hover:scale-95">Book Now
+                <a href="#" class="simple-btn hover:text-orange-400 hover:scale-95 font-[Jost,sans-serif]">Book Now
                   <span class="icon-right">
                     <i class="fas fa-arrow-right ml-2"></i>
                   </span>
@@ -628,19 +650,19 @@
               <img src="/images/property-4.png" alt=""
                 class="group-hover:scale-105 w-full max-w-full h-full duration-500" />
             </a>
-            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2">Sale</span>
+            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2 font-[Jost,sans-serif]">Sale</span>
           </div>
           <div class="text-white bg-[#232225] px-2 md:px-4 xl:px-8">
-            <h6 class="pt-4 text-lg md:text-2xl">
+            <h6 class="pt-4 text-lg md:text-2xl font-[Poppins,sans-serif]">
               $500.00
-              <span class="text-sm text-gray-400">/per day</span>
+              <span class="text-sm text-gray-400 font-[Poppins,sans-serif]">/per day</span>
             </h6>
             <h6 class="mt-4">
-              <a href="#" class="text-base md:text-xl font-serif hover:text-orange-500 line-clamp-2 xl:line-clamp-none">
+              <a href="#" class="text-base md:text-xl  hover:text-orange-500 line-clamp-2 xl:line-clamp-none font-[Poppins,sans-serif]">
                 Paramount Investments Prestige Property Management
               </a>
             </h6>
-            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base">
+            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base font-[Jost,sans-serif]">
               <span class="icon"> <i class="fas fa-map-marker-alt"></i></span>
               66 Broklyant, New York America
             </p>
@@ -648,13 +670,13 @@
               <div class="grid grid-cols-2 md:grid-cols-3 mt-2 text-gray-200 text-sm gap-1">
                 <div class="">
                   <span class="icon"><i class="fas fa-bed"></i></span>
-                  <span class="text">3 Beds</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Beds</span>
                 </div>
                 <div class="">
                   <span class="icon"><i class="fas fa-bath"></i></span>
-                  <span class="text">3 Baths</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Baths</span>
                 </div>
-                <a href="#" class="simple-btn text-gray-400 hover:text-orange-400 hover:scale-95">Book Now
+                <a href="#" class="simple-btn hover:text-orange-400 hover:scale-95 font-[Jost,sans-serif]">Book Now
                   <span class="icon-right">
                     <i class="fas fa-arrow-right ml-2"></i>
                   </span>
@@ -675,19 +697,19 @@
               <img src="/images/property-6.png" alt=""
                 class="group-hover:scale-105 w-full max-w-full h-full duration-500" />
             </a>
-            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2">Sale</span>
+            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2 font-[Jost,sans-serif]">Sale</span>
           </div>
           <div class="text-white bg-[#232225] px-2 md:px-4 xl:px-8">
-            <h6 class="pt-4 text-lg md:text-2xl">
+            <h6 class="pt-4 text-lg md:text-2xl font-[Poppins,sans-serif]">
               $500.00
-              <span class="text-sm text-gray-400">/per day</span>
+              <span class="text-sm text-gray-400 font-[Poppins,sans-serif]">/per day</span>
             </h6>
             <h6 class="mt-4">
-              <a href="#" class="text-base md:text-xl font-serif hover:text-orange-500 line-clamp-2 xl:line-clamp-none">
+              <a href="#" class="text-base md:text-xl  hover:text-orange-500 line-clamp-2 xl:line-clamp-none font-[Poppins,sans-serif]">
                 Paramount Investments Prestige Property Management
               </a>
             </h6>
-            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base">
+            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base font-[Jost,sans-serif]">
               <span class="icon"> <i class="fas fa-map-marker-alt"></i></span>
               66 Broklyant, New York America
             </p>
@@ -695,13 +717,13 @@
               <div class="grid grid-cols-2 md:grid-cols-3 mt-2 text-gray-200 text-sm gap-1">
                 <div class="">
                   <span class="icon"><i class="fas fa-bed"></i></span>
-                  <span class="text">3 Beds</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Beds</span>
                 </div>
                 <div class="">
                   <span class="icon"><i class="fas fa-bath"></i></span>
-                  <span class="text">3 Baths</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Baths</span>
                 </div>
-                <a href="#" class="simple-btn text-gray-400 hover:text-orange-400 hover:scale-95">Book Now
+                <a href="#" class="simple-btn hover:text-orange-400 hover:scale-95 font-[Jost,sans-serif]">Book Now
                   <span class="icon-right">
                     <i class="fas fa-arrow-right ml-2"></i>
                   </span>
@@ -722,19 +744,19 @@
               <img src="/images/property-6.png" alt=""
                 class="group-hover:scale-105 w-full max-w-full h-full duration-500" />
             </a>
-            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2">Sale</span>
+            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2 font-[Jost,sans-serif]">Sale</span>
           </div>
           <div class="text-white bg-[#232225] px-2 md:px-4 xl:px-8">
-            <h6 class="pt-4 text-lg md:text-2xl">
+            <h6 class="pt-4 text-lg md:text-2xl font-[Poppins,sans-serif]">
               $500.00
-              <span class="text-sm text-gray-400">/per day</span>
+              <span class="text-sm text-gray-400 font-[Poppins,sans-serif]">/per day</span>
             </h6>
             <h6 class="mt-4">
-              <a href="#" class="text-base md:text-xl font-serif hover:text-orange-500 line-clamp-2 xl:line-clamp-none">
+              <a href="#" class="text-base md:text-xl  hover:text-orange-500 line-clamp-2 xl:line-clamp-none font-[Poppins,sans-serif]">
                 Paramount Investments Prestige Property Management
               </a>
             </h6>
-            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base">
+            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base font-[Jost,sans-serif]">
               <span class="icon"> <i class="fas fa-map-marker-alt"></i></span>
               66 Broklyant, New York America
             </p>
@@ -742,13 +764,13 @@
               <div class="grid grid-cols-2 md:grid-cols-3 mt-2 text-gray-200 text-sm gap-1">
                 <div class="">
                   <span class="icon"><i class="fas fa-bed"></i></span>
-                  <span class="text">3 Beds</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Beds</span>
                 </div>
                 <div class="">
                   <span class="icon"><i class="fas fa-bath"></i></span>
-                  <span class="text">3 Baths</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Baths</span>
                 </div>
-                <a href="#" class="simple-btn text-gray-400 hover:text-orange-400 hover:scale-95">Book Now
+                <a href="#" class="simple-btn hover:text-orange-400 hover:scale-95 font-[Jost,sans-serif]">Book Now
                   <span class="icon-right">
                     <i class="fas fa-arrow-right ml-2"></i>
                   </span>
@@ -769,19 +791,19 @@
               <img src="/images/property-2.png" alt=""
                 class="group-hover:scale-105 w-full max-w-full h-full duration-500" />
             </a>
-            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2">Sale</span>
+            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2 font-[Jost,sans-serif]">Sale</span>
           </div>
           <div class="text-white bg-[#232225] px-2 md:px-4 xl:px-8">
-            <h6 class="pt-4 text-lg md:text-2xl">
+            <h6 class="pt-4 text-lg md:text-2xl font-[Poppins,sans-serif]">
               $500.00
-              <span class="text-sm text-gray-400">/per day</span>
+              <span class="text-sm text-gray-400 font-[Poppins,sans-serif]">/per day</span>
             </h6>
             <h6 class="mt-4">
-              <a href="#" class="text-base md:text-xl font-serif hover:text-orange-500 line-clamp-2 xl:line-clamp-none">
+              <a href="#" class="text-base md:text-xl  hover:text-orange-500 line-clamp-2 xl:line-clamp-none font-[Poppins,sans-serif]">
                 Paramount Investments Prestige Property Management
               </a>
             </h6>
-            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base">
+            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base font-[Jost,sans-serif]">
               <span class="icon"> <i class="fas fa-map-marker-alt"></i></span>
               66 Broklyant, New York America
             </p>
@@ -789,13 +811,13 @@
               <div class="grid grid-cols-2 md:grid-cols-3 mt-2 text-gray-200 text-sm gap-1">
                 <div class="">
                   <span class="icon"><i class="fas fa-bed"></i></span>
-                  <span class="text">3 Beds</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Beds</span>
                 </div>
                 <div class="">
                   <span class="icon"><i class="fas fa-bath"></i></span>
-                  <span class="text">3 Baths</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Baths</span>
                 </div>
-                <a href="#" class="simple-btn text-gray-400 hover:text-orange-400 hover:scale-95">Book Now
+                <a href="#" class="simple-btn hover:text-orange-400 hover:scale-95 font-[Jost,sans-serif]">Book Now
                   <span class="icon-right">
                     <i class="fas fa-arrow-right ml-2"></i>
                   </span>
@@ -810,39 +832,39 @@
             class="absolute bottom-0 left-1/2 group-hover:border-b-4 group-hover:border group-hover:border-orange-300 w-0  group-hover:w-full group-hover:translate-x-0 duration-500 ">
           </div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-1 group overflow-hidden relative rounded-b-lg">
+        <div class="grid grid-cols-2 md:grid-cols-1 group relative rounded-b-lg overflow-hidden">
           <div class="relative overflow-hidden">
             <a href="#" class="">
               <img src="/images/property-3.png" alt=""
                 class="group-hover:scale-105 w-full max-w-full h-full duration-500" />
             </a>
-            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2">Sale</span>
+            <span class="absolute top-0 right-0 bg-orange-400 rounded py-1 px-2 font-[Jost,sans-serif]">Sale</span>
           </div>
-          <div class="text-white bg-[#232225] px-2 md:px-4 xl:px-8 overflow-hidden">
-            <h6 class="pt-4 text-lg md:text-2xl">
+          <div class="text-white bg-[#232225] px-2 md:px-4 xl:px-8">
+            <h6 class="pt-4 text-lg md:text-2xl font-[Poppins,sans-serif]">
               $500.00
-              <span class="text-sm text-gray-400">/per day</span>
+              <span class="text-sm text-gray-400 font-[Poppins,sans-serif]">/per day</span>
             </h6>
             <h6 class="mt-4">
-              <a href="#" class="text-base md:text-xl font-serif hover:text-orange-500 line-clamp-2 xl:line-clamp-none">
+              <a href="#" class="text-base md:text-xl  hover:text-orange-500 line-clamp-2 xl:line-clamp-none font-[Poppins,sans-serif]">
                 Paramount Investments Prestige Property Management
               </a>
             </h6>
-            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base">
+            <p class="flex gap-2 my-4 text-gray-400 text-xs md:text-base font-[Jost,sans-serif]">
               <span class="icon"> <i class="fas fa-map-marker-alt"></i></span>
-              66 Broklyant, New York America 123123
+              66 Broklyant, New York America
             </p>
             <div class="border-1px border-gray-500 pb-3 md:pb-5">
               <div class="grid grid-cols-2 md:grid-cols-3 mt-2 text-gray-200 text-sm gap-1">
                 <div class="">
                   <span class="icon"><i class="fas fa-bed"></i></span>
-                  <span class="text">3 Beds</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Beds</span>
                 </div>
                 <div class="">
                   <span class="icon"><i class="fas fa-bath"></i></span>
-                  <span class="text">3 Baths</span>
+                  <span class="text font-[Jost,sans-serif]  text-gray-400">3 Baths</span>
                 </div>
-                <a href="#" class="simple-btn text-gray-400 hover:text-orange-400 hover:scale-95">Book Now
+                <a href="#" class="simple-btn hover:text-orange-400 hover:scale-95 font-[Jost,sans-serif]">Book Now
                   <span class="icon-right">
                     <i class="fas fa-arrow-right ml-2"></i>
                   </span>
@@ -860,7 +882,7 @@
       </div>
       <div class="text-white flex justify-center">
         <a href="#"
-          class="rounded-md cursor-pointer bg-gradient-to-t from-orange-600 to-orange-400 py-4 px-8 font-bold">
+          class="rounded-md cursor-pointer bg-gradient-to-t from-orange-600 to-orange-400 py-4 px-8 font-medium font-[Jost,sans-serif] uppercase">
           Sell All Listing
           <span class="icon-right">
             <i class="fas fa-arrow-right ml-2"></i>
@@ -872,22 +894,22 @@
   <!--  End property Start  -->
 
   <!--  Property Section Start  -->
-  <section class="mx-3 xl:mx-72 mb-12 mt-24 pb-24">
+  <section class="w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto mb-12 mt-24 pb-24">
     <div class="flex flex-col items-center justify-center pb-16 text-center">
-      <h3 class="mb-6 bg-white px-3 py-1 text-sm font-bold uppercase leading-5 tracking-widest text-orange-500">
+      <h3 class="mb-6 bg-white px-3 py-1 text-sm font-bold uppercase leading-5 tracking-widest text-orange-500 font-[Jost,sans-serif]">
         PROPERTY TYPE
       </h3>
-      <h1 class="w-full max-w-xl font-serif text-4xl">Let us find the perfect the property for you</h1>
+      <h1 class="w-full max-w-xl text-4xl font-[Vidaloka,serif]">Let us find the perfect the property for you</h1>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="group relative mt-6 rounded-md border bg-[#f8f8f8] px-3 hover:bg-gray-200/95">
         <div class="overflow-hidden px-6 py-8">
           <div class="flex w-full max-w-16 items-center justify-center rounded-full bg-orange-400">
             <img src="/images/property-type-icon1.svg" alt=""
               class="transform object-cover px-2 py-2 text-white transition duration-500 ease-in-out group-hover:-scale-x-100" />
           </div>
-          <h6 class="mt-4 w-44 text-xl font-semibold">Seamless Solutions Your Success</h6>
-          <p class="mt-6 font-normal text-gray-400">
+          <h6 class="mt-4 w-56 text-xl font-semibold font-[Poppins,sans-serif]">Seamless Solutions Your Success</h6>
+          <p class="mt-6 font-normal text-gray-400 font-[Jost,sans-serif]">
             Customer satisfaction is crucial for amohlodi business as it leads to customer loyalty loves positive word
           </p>
         </div>
@@ -898,8 +920,8 @@
             <img src="/images/property-type-icon2.svg" alt=""
               class="transform object-cover px-2 py-2 text-white transition duration-500 ease-in-out group-hover:-scale-x-100" />
           </div>
-          <h6 class="mt-4 w-44 text-xl font-semibold">Seamless Solutions Your Success</h6>
-          <p class="mt-6 font-normal text-gray-400">
+          <h6 class="mt-4 w-56 text-xl font-semibold font-[Poppins,sans-serif]">Seamless Solutions Your Success</h6>
+          <p class="mt-6 font-normal text-gray-400 font-[Jost,sans-serif]">
             Customer satisfaction is crucial for amohlodi business as it leads to customer loyalty loves positive word
           </p>
         </div>
@@ -910,18 +932,19 @@
             <img src="/images/property-type-icon3.svg" alt=""
               class="transform object-cover px-2 py-2 text-white transition duration-500 ease-in-out group-hover:-scale-x-100" />
           </div>
-          <h6 class="mt-4 w-44 text-xl font-semibold">Seamless Solutions Your Success</h6>
-          <p class="mt-6 font-normal text-gray-400">
+          <h6 class="mt-4 w-56 text-xl font-semibold font-[Poppins,sans-serif]">Seamless Solutions Your Success</h6>
+          <p class="mt-6 font-normal text-gray-400 font-[Jost,sans-serif]">
             Customer satisfaction is crucial for amohlodi business as it leads to customer loyalty loves positive word
           </p>
         </div>
       </div>
+      
     </div>
   </section>
   <!--  Property Section End  -->
 
   <!--Play Video start-->
-  <div class="relative z-10 mt-10 mx-2 sm:mx-6 lg:mx-8 xl:mx-16 sm:p-3">
+  <div class="relative z-10 mt-10 w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto sm:p-3">
     <div class="items-center justify-center">
       <div class="relative mx-auto my-auto min-h-56 max-w-full">
         <img src="/images/video-popup.png" alt="" class="h-full min-h-56 w-full max-w-full rounded-xl" />
@@ -949,30 +972,30 @@
 
   <!--Number start-->
   <section class="py-20 lg:py-32">
-    <div class="mx-2 sm:mx-6 lg:mx-8 xl:mx-16 sm:p-3">
+    <div class="w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto sm:p-3">
       <div class="grid grid-cols-2 sm:grid-cols-4 items-center justify-center">
         <div class="mb-10 sm:mb-0">
           <div class="relative items-center flex justify-center">
-            <h2 class="text-5xl lg:text-7xl font-semibold text-gray-100 count-patients"></h2>
-            <span class="absolute text-base lg:text-lg"> HAPPY PATIENTS </span>
+            <h2 class="text-5xl lg:text-7xl font-semibold text-gray-100 count-patients font-[Poppins,sans-serif]"></h2>
+            <span class="absolute text-base lg:text-lg font-[Jost,sans-serif]"> HAPPY PATIENTS </span>
           </div>
         </div>
         <div class="mb-10 sm:mb-0">
           <div class="relative items-center flex justify-center">
-            <h2 class="text-5xl lg:text-7xl font-semibold text-gray-100 count-hearts"></h2>
-            <span class="absolute text-base lg:text-lg"> SAVED HEARTS </span>
+            <h2 class="text-5xl lg:text-7xl font-semibold text-gray-100 count-hearts font-[Poppins,sans-serif]"></h2>
+            <span class="absolute text-base lg:text-lg font-[Jost,sans-serif]"> SAVED HEARTS </span>
           </div>
         </div>
         <div class="mb-10 sm:mb-0">
           <div class="relative items-center flex justify-center">
-            <h2 class="text-5xl lg:text-7xl font-semibold text-gray-100 count-doctors"></h2>
-            <span class="absolute text-base lg:text-lg"> EXPERT DOCTORS </span>
+            <h2 class="text-5xl lg:text-7xl font-semibold text-gray-100 count-doctors font-[Poppins,sans-serif]"></h2>
+            <span class="absolute text-base lg:text-lg font-[Jost,sans-serif]"> EXPERT DOCTORS </span>
           </div>
         </div>
         <div class="mb-10 sm:mb-0">
           <div class="relative items-center flex justify-center">
-            <h2 class="text-5xl lg:text-7xl font-semibold text-gray-100 count-works"></h2>
-            <span class="absolute text-base lg:text-lg"> SERENITY WORK </span>
+            <h2 class="text-5xl lg:text-7xl font-semibold text-gray-100 count-works font-[Poppins,sans-serif]"></h2>
+            <span class="absolute text-base lg:text-lg font-[Jost,sans-serif]"> SERENITY WORK </span>
           </div>
         </div>
       </div>
@@ -980,96 +1003,90 @@
   </section>
   <!--Number end-->
 
-
   <!--Section Cover Img start-->
-  <section class="">
-    <div class="">
-      <div class="relative flex items-center justify-between">
-        <div class=" ">
-          <div class="h-full max-w-full w-2/3 sm:left-0 xl:w-full">
-            <img src="/images/message-img.png" alt=""
-              class="h-full left-0 min-h-[691px] w-full max-w-72 lg:min-h-[798px] sm:max-w-screen-xl " />
-          </div>
-        </div>
-        <div
-          class="absolute w-11/12 md:w-full max-w-full sm:max-w-lg lg:max-w-2xl mx-auto my-auto ml-3 lg:ml-20 px-3 lg:mx-0 rounded-md bg-white p-3 lg:p-14 shadow-lg shadow-gray-400 sm:right-[20%] lg:right-[10%]">
-          <div class="">
-            <h2 class="mb-14 font-serif text-5xl">Get A Quote</h2>
-            <form action="#" class="top-0 w-full max-w-full">
-              <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
-                <div class="h-full max-h-14 w-full rounded-lg border border-gray-300 lg:max-w-72">
-                  <div class="relative flex items-center justify-center">
-                    <input type="text"
-                      class="border focus:border-orange-500 focus:outline-none h-11 w-full rounded-lg py-3 pl-2 lg:h-14"
-                      placeholder="Name" />
-                    <span class="absolute top-1/3 right-0"><ion-icon name="person" class="pr-3"></ion-icon></span>
-                  </div>
-                </div>
-                <div class="h-full max-h-14 w-full lg:max-w-72 rounded-lg border border-gray-300">
-                  <div class="relative flex items-center justify-center">
-                    <input type="tel"
-                      class="border focus:border-orange-500 focus:outline-none h-11 w-full  rounded-lg py-3 pl-2 lg:h-14"
-                      placeholder="Your Phone" />
-                    <span class="absolute top-1/3 right-1"><ion-icon name="call" class="pr-3"></ion-icon></span>
-                  </div>
-                </div>
-                <div class="h-full max-h-14 w-full  rounded-lg border border-gray-300 lg:max-w-72">
-                  <div class="relative flex items-center justify-center">
-                    <input type="email"
-                      class="border focus:border-orange-500 focus:outline-none h-11 w-full rounded-lg py-3 pl-2 lg:h-14"
-                      placeholder="Your Email" />
-                    <span class="absolute top-1/3 right-1"><ion-icon name="navigate" class="pr-3"></ion-icon></span>
-                  </div>
-                </div>
-                <div class="h-full max-h-14 w-full rounded-lg border border-gray-300 lg:max-w-72">
-                  <div class="relative flex items-center justify-center">
-                    <input type="text"
-                      class="border focus:border-orange-500 focus:outline-none h-11 w-full rounded-lg py-3 pl-2 lg:h-14"
-                      placeholder="Your Address" />
-                    <span class="absolute right-1 top-1/3"><ion-icon name="location" class="pr-3"></ion-icon></span>
-                  </div>
+  <section
+    class="w-2/3 lg:w-[70%] xl:w-[60%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-full h-[800px] md:h-[600px]  lg:h-[700px] xl:h-[1000px] max-h-full xl:max-h-[798px] pb-30">
+    <div class="relative h-full sm:left-0">
+      <img src="/images/message-img.png" alt="" class="w-full h-full" />
+      <div
+        class="absolute w-11/12 md:w-full max-w-full sm:max-w-lg lg:max-w-2xl mx-auto my-auto ml-3 px-3 lg:mx-0 rounded-md bg-white p-3 lg:p-8 xl:p-14 shadow-lg shadow-gray-400 -right-[20%] sm:-right-[20%] md:-right-[40%] lg:-right-[35%] top-20">
+        <div class="">
+          <h2 class="mb-14  text-5xl font-[Vidaloka,serif]">Get A Quote</h2>
+          <form action="#" class="top-0 w-full max-w-full">
+            <div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
+              <div class="h-full max-h-14 w-full rounded-lg border border-gray-300 lg:max-w-72">
+                <div class="relative flex items-center justify-center">
+                  <input type="text"
+                    class="border focus:border-orange-500 focus:outline-none h-11 w-full rounded-lg py-3 pl-2 lg:h-14"
+                    placeholder="Name" />
+                  <span class="absolute top-1/3 right-0"><ion-icon name="person" class="pr-3"></ion-icon></span>
                 </div>
               </div>
-              <div class="mt-7">
-                <div class="mb-4 ">
-                  <div
-                    class="relative flex h-full max-h-40 w-full max-w-xl items-start justify-between rounded-xl border border-gray-300">
-                    <textarea class="h-32 w-full py-3 pl-2 border focus:border-orange-500 focus:outline-none rounded-xl"
-                      placeholder="Write Message.."></textarea>
-                    <span class="absolute top-5 right-0 px-2"><ion-icon name="location" class="pr-3"></ion-icon></span>
-                  </div>
+              <div class="h-full max-h-14 w-full lg:max-w-72 rounded-lg border border-gray-300">
+                <div class="relative flex items-center justify-center">
+                  <input type="tel"
+                    class="border focus:border-orange-500 focus:outline-none h-11 w-full rounded-lg py-3 pl-2 lg:h-14"
+                    placeholder="Your Phone" />
+                  <span class="absolute top-1/3 right-1"><ion-icon name="call" class="pr-3"></ion-icon></span>
                 </div>
+              </div>
+              <div class="h-full max-h-14 w-full  rounded-lg border border-gray-300 lg:max-w-72">
+                <div class="relative flex items-center justify-center">
+                  <input type="email"
+                    class="border focus:border-orange-500 focus:outline-none h-11 w-full rounded-lg py-3 pl-2 lg:h-14"
+                    placeholder="Your Email" />
+                  <span class="absolute top-1/3 right-1"><ion-icon name="navigate" class="pr-3"></ion-icon></span>
+                </div>
+              </div>
+              <div class="h-full max-h-14 w-full rounded-lg border border-gray-300 lg:max-w-72">
+                <div class="relative flex items-center justify-center">
+                  <input type="text"
+                    class="border focus:border-orange-500 focus:outline-none h-11 w-full rounded-lg py-3 pl-2 lg:h-14"
+                    placeholder="Your Address" />
+                  <span class="absolute right-1 top-1/3"><ion-icon name="location" class="pr-3"></ion-icon></span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-7">
+              <div class="mb-4 ">
                 <div
-                  class="mb-4 mt-7 h-14  rounded-lg bg-gradient-to-r from-orange-400/85 to-orange-500  px-3 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-300">
-                  <button type="submit" class="h-14 w-full font-semibold text-white">Send Message</button>
+                  class="relative flex h-full max-h-full w-full max-w-full items-start justify-between rounded-xl border border-gray-300">
+                  <textarea class="h-full w-full py-3 pl-2 border focus:border-orange-500 focus:outline-none rounded-xl"
+                    placeholder="Write Message.."></textarea>
+                  <span class="absolute top-5 right-0 px-2"><ion-icon name="location" class="pr-3"></ion-icon></span>
                 </div>
-            </form>
-          </div>
+              </div>
+              <div
+                class="mb-4 mt-7 h-14  rounded-lg bg-gradient-to-r from-orange-400/85 to-orange-500  px-3 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-300">
+                <button type="submit" class="h-14 w-full font-medium text-white font-[Jost,sans-serif] uppercase">Send Message</button>
+              </div>
+          </form>
         </div>
       </div>
+    </div>
   </section>
   <!--Section Cover Img end-->
 
   <!-- Section swiper -->
   <section class="bg-gray-100 py-20 relative">
     <div class="flex flex-col justify-center items-center pb-3 text-center">
-      <h3 class="bg-white text-orange-500 font-bold text-sm px-3 py-1 uppercase leading-5 tracking-widest mb-6">
+      <h3 class="bg-white text-orange-500 font-bold text-sm px-3 py-1 uppercase leading-5 tracking-widest mb-6 font-[Jost,sans-serif]">
         Latest Portfolio
       </h3>
-      <h1 class="text-4xl max-w-xl font-serif font-bold">
+      <h1 class="text-4xl max-w-xl  font-[Vidaloka,serif]">
         Optimum Homes & Properties Realty Experts
       </h1>
     </div>
-    <div class="swiper mySwiper max-w-full">
+    <div class="mt-10 swiper mySwiper max-w-full">
       <div class="swiper-wrapper">
         <div class="swiper-slide group z-1 relative overflow-hidden">
           <img src="/images/portfolio4.png" alt="" class="z-1" />
           <div
             class="translate-y-40 group-hover:translate-y-0 transform duration-200 bg-black z-20 absolute bottom-0 text-white p-5">
-            <h1 class="text-xl hover:text-orange-500 font-semibold text-start mb-3">
+            <h1 class="text-xl hover:text-orange-500 font-semibold text-start mb-3 font-[Poppins,sans-serif]">
               Outsourcing business
             </h1>
-            <p class="text-start">
+            <p class="text-start font-[Jost,sans-serif]">
               Real Estate is a vast industry that deals with the buying,
               selling, and renting of properties
             </p>
@@ -1082,10 +1099,10 @@
           <img src="/images/portfolio3.png" alt="" />
           <div
             class="translate-y-40 group-hover:translate-y-0 transform duration-200 bg-black z-20 absolute bottom-0 text-white p-5">
-            <h1 class="text-xl hover:text-orange-500 font-semibold text-start mb-3">
+            <h1 class="text-xl hover:text-orange-500 font-semibold text-start mb-3 font-[Poppins,sans-serif]">
               Outsourcing business
             </h1>
-            <p class="text-start">
+            <p class="text-start font-[Jost,sans-serif]">
               Real Estate is a vast industry that deals with the buying,
               selling, and renting of properties
             </p>
@@ -1098,10 +1115,10 @@
           <img src="/images/portfolio2.png" alt="" />
           <div
             class="translate-y-40 group-hover:translate-y-0 transform duration-200 bg-black z-20 absolute bottom-0 text-white p-5">
-            <h1 class="text-xl hover:text-orange-500 font-semibold text-start mb-3">
+            <h1 class="text-xl hover:text-orange-500 font-semibold text-start mb-3 font-[Poppins,sans-serif]">
               Outsourcing business
             </h1>
-            <p class="text-start">
+            <p class="text-start font-[Jost,sans-serif]">
               Real Estate is a vast industry that deals with the buying,
               selling, and renting of properties
             </p>
@@ -1114,10 +1131,10 @@
           <img src="/images/portfolio1.png" alt="" />
           <div
             class="translate-y-40 group-hover:translate-y-0 transform duration-200 bg-black z-20 absolute bottom-0 text-white p-5">
-            <h1 class="text-xl hover:text-orange-500 font-semibold text-start mb-3">
+            <h1 class="text-xl hover:text-orange-500 font-semibold text-start mb-3 font-[Poppins,sans-serif]">
               Outsourcing business
             </h1>
-            <p class="text-start">
+            <p class="text-start font-[Jost,sans-serif]">
               Real Estate is a vast industry that deals with the buying,
               selling, and renting of properties
             </p>
@@ -1133,18 +1150,18 @@
 
   <!-- Section body -->
   <section class="bg-gray-100 pb-8 relative">
-    <div class="grid grid-cols-2 mx-2 sm:mx-6 lg:mx-8 xl:mx-16 sm:p-3 pb-24">
+    <div class="grid grid-cols-2 w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto sm:p-3 pb-24">
       <div class="xl:flex xl:flex-col xl:justify-center items-start pb-3 text-start col-span-2 xl:col-span-1">
-        <h3 class="bg-white text-orange-500 font-bold text-sm px-3 py-1 uppercase leading-5 tracking-widest mb-6">
+        <h3 class="bg-white text-orange-500 font-bold text-sm px-3 py-1 uppercase leading-5 tracking-widest mb-6 font-[Jost,sans-serif]">
           Latest Portfolio
         </h3>
-        <h1 class="text-2xl md:text-3xl xl:text-4xl max-w-xl font-serif font-bold">
+        <h1 class="text-2xl md:text-3xl xl:text-4xl max-w-xl font-[Vidaloka,serif]">
           Optimum Homes & Properties Realty Experts
         </h1>
       </div>
       <div
         class="text-start xl:ml-10 xl:mr-48 xl:mt-24 text-gray-500 font-base tracking-wide leading-7 col-span-2 xl:col-span-1">
-        <p>
+        <p class="font-[Jost,sans-serif]">
           Use receiving accounts a number a currencies and get paid like a local Use receivin accounts a number paid
           the most beautiful think
         </p>
@@ -1157,8 +1174,8 @@
               <div class="swiper-slide gsap next">
                 <div class="grid grid-cols-4 text-start ">
                   <div class="flex flex-col col-span-2">
-                    <h3 class="text-xl font-bold">Sakib Fahad</h3>
-                    <h6 class="text-gray-500 font-medium">Content Creator</h6>
+                    <h3 class="text-xl font-bold font-[Poppins,sans-serif]">Sakib Fahad</h3>
+                    <h6 class="text-gray-500 font-medium font-[Poppins,sans-serif]">Content Creator</h6>
                   </div>
                   <div class="grid grid-cols-subgrid gap-4 col-span-2">
                     <div class="col-start-2 flex justify-end items-end text-end">
@@ -1166,7 +1183,7 @@
                     </div>
                   </div>
                   <div class="col-span-4 text-start py-3 md:py-10">
-                    <p>
+                    <p class="font-[Jost,sans-serif] text-gray-400 text-lg">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, autem! Consectetur illo tempora
                       sed repudiandae eaque velit expedita, ipsa earum explicabo libero, voluptatibus aliquid odio
                     </p>
@@ -1183,8 +1200,8 @@
               <div class="swiper-slide gsap next">
                 <div class="grid grid-cols-4 text-start">
                   <div class="flex flex-col col-span-2">
-                    <h3 class="text-xl font-bold">David Nguyen</h3>
-                    <h6 class="text-gray-500 font-medium">Web Developer</h6>
+                    <h3 class="text-xl font-bold font-[Poppins,sans-serif]">David Nguyen</h3>
+                    <h6 class="text-gray-500 font-medium font-[Poppins,sans-serif]">Web Developer</h6>
                   </div>
                   <div class="grid grid-cols-subgrid gap-4 col-span-2">
                     <div class="col-start-2 flex justify-end items-end text-end">
@@ -1192,7 +1209,7 @@
                     </div>
                   </div>
                   <div class="col-span-4 text-start py-10">
-                    <p>
+                    <p class="font-[Jost,sans-serif] text-gray-400 text-lg">
                       Their product exceeded his my routi expectations. The the quality and attention to detail a the
                       a moutstanding and it has become an essential most a education the a man who can do tant clearly
                     </p>
@@ -1230,17 +1247,17 @@
 
   <!-- view more -->
   <section class="bg-gray-100">
-    <div class="pb-10 mx-2 sm:mx-6 lg:mx-8 xl:mx-16 sm:p-3">
+    <div class="pb-10 w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto sm:p-3">
       <div class="lg:flex lg:justify-between">
         <div class="basis-1/2 mb-5 lg:mb-0">
-          <span class="bg-white text-lg text-orange-500 p-2 rounded">LATEST PRODUCT</span>
-          <div class="mt-3 font-serif text-2xl lg:text-3xl xl:text-4xl font-semibold">
+          <span class="bg-white text-lg text-orange-500 p-2 rounded font-[Jost,sans-serif]">LATEST PRODUCT</span>
+          <div class="mt-3  text-2xl lg:text-3xl xl:text-4xl  font-[Vidaloka,serif]">
             Prestige Propert Management property for you
           </div>
         </div>
         <div class="lg:flex lg:justify-end lg:items-end">
           <a href="javascript:void(0)"
-            class="px-4 py-2 border border-solid rounded-md border-orange-500 shadow-md gradient-hover hover:text-white hover:bg-orange-500">
+            class="px-4 py-2 border border-solid rounded-md border-orange-500 shadow-md gradient-hover hover:text-white hover:bg-orange-500 font-[Jost,sans-serif]">
             view more +</a>
         </div>
       </div>
@@ -1250,27 +1267,27 @@
           <div class="border border-gray-300 overflow-hidden">
             <img class="w-full transition-all transform group-hover:scale-110" src="/images/blog1.png" />
             <div class="absolute bottom-40 right-8 px-3 py-2 rounded-lg bg-white">
-              <div class="text-2xl font-semibold">09</div>
-              <div class="text-sm text-gray-400">Mar</div>
+              <div class="text-2xl font-semibold font-[Poppins,sans-serif]">09</div>
+              <div class="text-sm text-gray-400 font-[Poppins,sans-serif]">Mar</div>
             </div>
           </div>
           <div class="ml-5 mt-5">
             <div class="flex justify-center p-1 py-2 border border-gray-300 w-64 md:w-48 xl:w-64 rounded-md">
               <div class="flex mr-4 items-center">
                 <ion-icon class="mr-1" name="person-circle-outline"></ion-icon>
-                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400">By Admin</span>
+                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">By Admin</span>
               </div>
               <div class="flex items-center">
                 <ion-icon class="w-3.5 mr-1" name="pricetags-outline"></ion-icon>
-                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400">Comments
+                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Comments
                   (05)</span>
               </div>
             </div>
-            <div class="mt-5 pb-5 font-semibold cursor-pointer hover:text-orange-400 text-lg line-clamp-2">
+            <div class="mt-5 pb-5 font-semibold cursor-pointer hover:text-orange-400 text-lg line-clamp-2 font-[Poppins,sans-serif]">
               Discover Endless Possibilities in Real Estate Live Your Best
               Life in a New Home
             </div>
-            <a class="  max-w-24 w-full font-semibold  hover:text-orange-500" id="mouseLeave">
+            <a class="  max-w-24 w-full font-medium  hover:text-orange-500 font-[Jost,sans-serif]" id="mouseLeave">
               Book Now
               <span class=" ml-2 text-orange-400 group-hover:ml-1 text-lg transition-all  ease-in-out" id="plus">
                 +</span>
@@ -1278,31 +1295,31 @@
           </div>
         </div>
         <div
-          class="relative rounded-lg border border-x-gray-200 pb-5 bg-[#f7f7f7fe] mb-10 sm:mb-0 hover:shadow-md group">
+          class="relative rounded-xl border border-x-gray-200 pb-5 bg-[#f7f7f7fe] mb-10 sm:mb-0 hover:shadow-md group">
           <div class="border border-gray-300 overflow-hidden">
-            <img class="w-full transition-all transform group-hover:scale-110" src="/images//blog2.png" />
-          </div>
-          <div class="absolute bottom-40 right-8 px-3 py-2 rounded-lg bg-white">
-            <div class="text-2xl font-semibold">09</div>
-            <div class="text-sm text-gray-400">Mar</div>
+            <img class="w-full transition-all transform group-hover:scale-110" src="/images/blog2.png" />
+            <div class="absolute bottom-40 right-8 px-3 py-2 rounded-lg bg-white">
+              <div class="text-2xl font-semibold font-[Poppins,sans-serif]">09</div>
+              <div class="text-sm text-gray-400 font-[Poppins,sans-serif]">Mar</div>
+            </div>
           </div>
           <div class="ml-5 mt-5">
             <div class="flex justify-center p-1 py-2 border border-gray-300 w-64 md:w-48 xl:w-64 rounded-md">
               <div class="flex mr-4 items-center">
                 <ion-icon class="mr-1" name="person-circle-outline"></ion-icon>
-                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400">By Admin</span>
+                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">By Admin</span>
               </div>
               <div class="flex items-center">
                 <ion-icon class="w-3.5 mr-1" name="pricetags-outline"></ion-icon>
-                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400">Comments
+                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Comments
                   (05)</span>
               </div>
             </div>
-            <div class="mt-5 pb-5 font-semibold cursor-pointer hover:text-orange-400 text-lg line-clamp-2">
+            <div class="mt-5 pb-5 font-semibold cursor-pointer hover:text-orange-400 text-lg line-clamp-2 font-[Poppins,sans-serif]">
               Discover Endless Possibilities in Real Estate Live Your Best
               Life in a New Home
             </div>
-            <a class="  max-w-24 w-full font-semibold  hover:text-orange-500" id="mouseLeave">
+            <a class="  max-w-24 w-full font-medium  hover:text-orange-500 font-[Jost,sans-serif]" id="mouseLeave">
               Book Now
               <span class=" ml-2 text-orange-400 group-hover:ml-1 text-lg transition-all  ease-in-out" id="plus">
                 +</span>
@@ -1310,56 +1327,57 @@
           </div>
         </div>
         <div
-          class="relative rounded-lg border border-x-gray-200 pb-5 bg-[#f7f7f7fe] mb-10 sm:mb-0 hover:shadow-md group">
-          <div class="border border-gray-300 overflow-hidden">
-            <img class="w-full transition-all transform group-hover:scale-110" src="/images/blog1.png" />
-          </div>
+        class="relative rounded-xl border border-x-gray-200 pb-5 bg-[#f7f7f7fe] mb-10 sm:mb-0 hover:shadow-md group">
+        <div class="border border-gray-300 overflow-hidden">
+          <img class="w-full transition-all transform group-hover:scale-110" src="/images/blog1.png" />
           <div class="absolute bottom-40 right-8 px-3 py-2 rounded-lg bg-white">
-            <div class="text-2xl font-semibold">09</div>
-            <div class="text-sm text-gray-400">Mar</div>
-          </div>
-          <div class="ml-5 mt-5">
-            <div class="flex justify-center p-1 py-2 border border-gray-300 w-64 md:w-48 xl:w-64 rounded-md">
-              <div class="flex mr-4 items-center">
-                <ion-icon class="mr-1" name="person-circle-outline"></ion-icon>
-                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400">By Admin</span>
-              </div>
-              <div class="flex items-center">
-                <ion-icon class="w-3.5 mr-1" name="pricetags-outline"></ion-icon>
-                <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400">Comments
-                  (05)</span>
-              </div>
-            </div>
-            <div class="mt-5 pb-5 font-semibold cursor-pointer hover:text-orange-400 text-lg line-clamp-2">
-              Discover Endless Possibilities in Real Estate Live Your Best
-              Life in a New Home
-            </div>
-            <a class="  max-w-24 w-full font-semibold  hover:text-orange-500" id="mouseLeave">
-              Book Now
-              <span class=" ml-2 text-orange-400 group-hover:ml-1 text-lg transition-all  ease-in-out" id="plus">
-                +</span>
-            </a>
+            <div class="text-2xl font-semibold font-[Poppins,sans-serif]">09</div>
+            <div class="text-sm text-gray-400 font-[Poppins,sans-serif]">Mar</div>
           </div>
         </div>
+        <div class="ml-5 mt-5">
+          <div class="flex justify-center p-1 py-2 border border-gray-300 w-64 md:w-48 xl:w-64 rounded-md">
+            <div class="flex mr-4 items-center">
+              <ion-icon class="mr-1" name="person-circle-outline"></ion-icon>
+              <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">By Admin</span>
+            </div>
+            <div class="flex items-center">
+              <ion-icon class="w-3.5 mr-1" name="pricetags-outline"></ion-icon>
+              <span class="text-xs text-gray-600 font-thin cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Comments
+                (05)</span>
+            </div>
+          </div>
+          <div class="mt-5 pb-5 font-semibold cursor-pointer hover:text-orange-400 text-lg line-clamp-2 font-[Poppins,sans-serif]">
+            Discover Endless Possibilities in Real Estate Live Your Best
+            Life in a New Home
+          </div>
+          <a class="  max-w-24 w-full font-medium  hover:text-orange-500 font-[Jost,sans-serif]" id="mouseLeave">
+            Book Now
+            <span class=" ml-2 text-orange-400 group-hover:ml-1 text-lg transition-all  ease-in-out" id="plus">
+              +</span>
+          </a>
+        </div>
+      </div>
       </div>
   </section>
 
   <footer class="bg-black">
-    <div class="max-w-7xl mx-auto px-6 pt-32 grid md:grid-cols-3 gap-10 lg:gap-32 pb-10">
+    <div
+      class="w-[90%] md:max-w-[720px] lg:max-w-[1024px] xl:max-w-[1440px] mx-auto px-6 pt-32 grid md:grid-cols-3 gap-10 lg:gap-32 pb-10">
       <div class="text-white">
         <div>
           <img class="w-36" src="/images/white-logo.png" />
         </div>
-        <div class="text-sm text-gray-400 mt-5">It is a long established fact that a reader will be distracted</div>
-        <div class="font-bold text-lg mt-5">Lets Work Together</div>
+        <div class="text-lg text-gray-400 mt-5 font-[Jost,sans-serif]">It is a long established fact that a reader will be distracted</div>
+        <div class="font-bold text-lg mt-5 font-[Poppins,sans-serif]">Lets Work Together</div>
         <div class="grid grid-cols-2 gap-5 mt-5">
           <div class="flex">
             <div class="mr-3">
               <ion-icon class="text-orange-500" name="add-circle-outline"></ion-icon>
             </div>
             <div>
-              <div class="text-xs text-gray-400">Address</div>
-              <div class="text-sm">66 Broklyant, New York India</div>
+              <div class="text-xl text-gray-400 font-[Jost,sans-serif]">Address</div>
+              <div class="text-lg font-[Jost,sans-serif]">66 Broklyant, New York India</div>
             </div>
           </div>
           <div class="flex">
@@ -1367,42 +1385,42 @@
               <ion-icon class="text-orange-500" name="call-outline"></ion-icon>
             </div>
             <div>
-              <div class="text-xs text-gray-400">Phone Number</div>
-              <div class="text-sm">012 345 678 9101</div>
+              <div class="text-xl text-gray-400 font-[Jost,sans-serif]">Phone Number</div>
+              <div class="text-lg font-[Jost,sans-serif]">012 345 678 9101</div>
             </div>
           </div>
         </div>
       </div>
       <div class="text-white">
-        <div class="font-semibold text-xl">Services</div>
+        <div class="font-semibold text-xl font-[Poppins,sans-serif]">Services</div>
         <div class="mt-5">
           <ul>
             <li class="flex items-center mb-2">
               <ion-icon class="text-orange-400 mr-2" name="code-outline"></ion-icon>
-              <a href="#" class="text-sm cursor-pointer hover:text-orange-400">Reliable Rentals</a>
+              <a href="#" class="text-lg cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Reliable Rentals</a>
             </li>
             <li class="flex items-center mb-2">
               <ion-icon class="text-orange-400 mr-2" name="code-outline"></ion-icon>
-              <a href="#" class="text-sm cursor-pointer hover:text-orange-400">Golden Key Properties</a>
+              <a href="#" class="text-lg cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Golden Key Properties</a>
             </li>
             <li class="flex items-center mb-2">
               <ion-icon class="text-orange-400 mr-2" name="code-outline"></ion-icon>
-              <a href="#" class="text-sm cursor-pointer hover:text-orange-400">Swift Home Sales</a>
+              <a href="#" class="text-lg cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Swift Home Sales</a>
             </li>
             <li class="flex items-center mb-2">
               <ion-icon class="text-orange-400 mr-2" name="code-outline"></ion-icon>
-              <a href="#" class="text-sm cursor-pointer hover:text-orange-400">Elite Realty Services</a>
+              <a href="#" class="text-lg cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Elite Realty Services</a>
             </li>
             <li class="flex items-center mb-2">
               <ion-icon class="text-orange-400 mr-2" name="code-outline"></ion-icon>
-              <a href="#" class="text-sm cursor-pointer hover:text-orange-400">Dream Property Solutions</a>
+              <a href="#" class="text-lg cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Dream Property Solutions</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="text-white">
-        <div class="font-semibold text-xl">Our gallery</div>
-        <div class="text-sm text-gray-400 mt-5">It is a long established fact that reader will be Elite Property</div>
+        <div class="font-semibold text-xl font-[Poppins,sans-serif]">Our gallery</div>
+        <div class="text-lg text-gray-400 mt-5 font-[Jost,sans-serif]">It is a long established fact that reader will be Elite Property</div>
         <div class="mt-5">
           <form>
             <div class="flex">
@@ -1441,14 +1459,14 @@
     </div>
     <div class="text-white border-t-2 border-gray-600 max-w-7xl mx-auto px-6 pt-10 pb-10 flex justify-between">
       <div>
-        <p class="text-sm text-gray-400 cursor-pointer hover:text-orange-400">
+        <p class=" text-gray-400 cursor-pointer hover:text-orange-400 font-[Jost,sans-serif] text-xl">
           © CityScape 2024 | All Rights Reserved.
         </p>
       </div>
       <div>
-        <a href="#" class="mr-3 text-sm text-gray-400 cursor-pointer hover:text-orange-400">Terms & Condition</a>
-        <a href="#" class="mr-3 text-sm text-gray-400 cursor-pointer hover:text-orange-400">Privacy Policy</a>
-        <a href="#" class="mr-3 text-sm text-gray-400 cursor-pointer hover:text-orange-400">Contact Us</a>
+        <a href="#" class="mr-3 text-xl text-gray-400 cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Terms & Condition</a>
+        <a href="#" class="mr-3 text-xl text-gray-400 cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Privacy Policy</a>
+        <a href="#" class="mr-3 text-xl text-gray-400 cursor-pointer hover:text-orange-400 font-[Jost,sans-serif]">Contact Us</a>
       </div>
     </div>
   </footer>

@@ -16,7 +16,7 @@ export function handleChangeNav(): void {
   }
 }
 
-export function handleAddNavMenu(e: string): void {
+export function handleAddNavMenu(e: string) {
   const navbar = document.querySelector(`${e}Menu`);
   const homeMenu = document.querySelector('.homeMenu');
   const pagesMenu = document.querySelector('.pagesMenu');
