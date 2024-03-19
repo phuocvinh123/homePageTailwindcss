@@ -39,6 +39,7 @@ setupFormValid();
 //   });
 //   console.log(test);
 // };
+
 function handleAddNavMenuItem() {
   const menuItems = document.querySelectorAll(".activated-narbar");
   menuItems?.forEach(items => {
@@ -65,7 +66,7 @@ document.querySelector(".button-rent")?.addEventListener("click", () => handleCh
 document.querySelector(".button-buy")?.addEventListener("click", () => handleChangeActivated(".button-buy"));
 document.querySelector(".button-sell")?.addEventListener("click", () => handleChangeActivated(".button-sell"));
 
-// 4000
+
 document.addEventListener("DOMContentLoaded", function () {
   const countElement = document.querySelector(".count-animate");
 
@@ -120,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
     elementsToCount.forEach(function (element) {
       const countElement = document.querySelector(element.selector) as HTMLElement | null;
       if (countElement && !countedElements.includes(element.selector)) {
-        const elementPosition = countElement.getBoundingClientRect().top;s
+        const elementPosition = countElement.getBoundingClientRect().top;
         const screenHeight = window.innerHeight;
         const triggerPosition = screenHeight * 0.75;
 
@@ -144,8 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
     checkScrollAndCount();
   });
 });
-
- 
 
 
 
@@ -178,7 +177,7 @@ buttonCloseVideo?.addEventListener("click", () => {
   handleChangeHidden();
 });
 
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
   const mouseLeaves = document.querySelectorAll("#mouseLeave");
 
   mouseLeaves.forEach((mouseLeave) => {
@@ -186,12 +185,63 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     plus?.classList.remove("group-hover:ml-1");
 
-    mouseLeave.addEventListener("mouseenter", () =>{
+    mouseLeave.addEventListener("mouseenter", () => {
       plus?.classList.add("group-hover:ml-1");
     });
 
-    mouseLeave.addEventListener("mouseleave", function() {
+    mouseLeave.addEventListener("mouseleave", function () {
       plus?.classList.remove("group-hover:ml-1");
     });
   });
 });
+// import { animationSlide } from "./gasp.ts";
+// animationSlide(document.querySelector('#animation-slide')!, 0)
+
+interface MenuItem {
+  menuName: string;
+  submenuItems: string[];
+}
+
+interface MenuData {
+  menuItems: MenuItem[];
+}
+
+const data: MenuData = {
+  menuItems: [
+    {
+      menuName: 'Home',
+      submenuItems: ['Home One', 'Home Two', 'Home Three', 'Home Four', 'Home Five', 'Home Video', 'Home Map'],
+    },
+    {
+      menuName: 'Pages',
+      submenuItems: [
+        'Property',
+        'Property Sidebar',
+        'Property Details',
+        'Add new Listing',
+        'Map Location',
+        'About us',
+        'FAQ',
+        'Cheack out',
+        'Cart',
+        'Login',
+        'Account',
+      ],
+    },
+    {
+      menuName: 'Project',
+      submenuItems: ['Project', 'Project Details'],
+    },
+    {
+      menuName: 'Blog',
+      submenuItems: ['Blog Classic', 'Blog Details'],
+    },
+  ],
+};
+
+const template = Handlebars.compile(document.getElementById('menu-template')?.innerHTML);
+const html = template(data);
+const menuContainer = document.getElementById('menu-container');
+if (menuContainer !== null && menuContainer !== undefined) {
+  menuContainer.innerHTML = html;
+}

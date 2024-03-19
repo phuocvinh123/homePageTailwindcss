@@ -23,6 +23,8 @@ export const handleChangeActivated = (e: string) => {
   }
 }
 export const handleChangeHidden = () => {
+  console.log('button-close-video');
+
   const video = document.querySelector('.youtube')?.classList;
   const backgroundBlack = document.querySelector('.button-close-video')?.classList;
   const contentHidden = 'hidden';

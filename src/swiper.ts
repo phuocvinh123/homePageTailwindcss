@@ -9,11 +9,7 @@ export const setupSwiper = () => {
     //   el: '.swiper-pagination',
     //   type: 'bullets',
     //   clickable: true
-    // },
-    on: {
-      init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
-      slideChangeTransitionStart: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
-    },
+    // },    
     autoplay: {
       delay: 5000,
     },
@@ -58,6 +54,10 @@ export const setupSwiper = () => {
     navigation: {
       nextEl: ".swiper-btn-next",
       prevEl: ".swiper-btn-prev",
+    },
+    on: {
+      init: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
+      slideChangeTransitionStart: (el: any) => animationSlide(el.slides[el.activeIndex], 0),
     },
   });
 }

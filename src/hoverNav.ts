@@ -1,4 +1,6 @@
 export function handleChangeNav(): void {
+  console.log('backgroundBlack');
+
   const navbar = document.querySelector('.navbar');
   const blackground = document.querySelector('.backgroundBlack');
   const contentOpen = 'translate-x-72';

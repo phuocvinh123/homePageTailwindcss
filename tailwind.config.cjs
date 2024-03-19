@@ -331,17 +331,8 @@ module.exports = {
             transform: 'translateX(0px)',
           },
         },
-        '0%': {
-          transform: 'scale(0)' /* Tạo phần tử nhỏ lại */,
-          opacity: '0.5' /* Giảm độ mờ */,
-        },
-        '50%': {
-          transform: 'scale(0)' /* Phần tử to lên */,
-          opacity: '1' /* Tăng độ mờ */,
-        },
-        '100% ': {
-          transform: 'scale(0)' /* Trở lại kích thước ban đầu */,
-          opacity: '0.5' /* Giảm độ mờ */,
+        ping: {
+          '75%,100% ': { transform: 'scale(1.5)', opacity: '0' },
         },
       },
       animation: {
